@@ -1,0 +1,32 @@
+Do the following if you forget your Ubuntu log in password:
+
+***************************************************************
+To reset the Linux password in WSL, you have to:
+ 1   Switch the default user to root
+ 2   Reset the password for the normal user
+ 3   Switch back the default user to the normal user
+ 
+***************************************************************
+
+Open Command Prompt (cmd)
+> ubuntu1804 config --default-user root
+
+Now, start the Linux distribution app, you should be logged in as root. You can reset the password for the normal user account.
+
+Type the command to show your user name:
+# ls /home
+For example, your username is abcde, then type:
+# passwd abcde
+You will be prompted to enter a new password, and then retype to confirm it.
+You should see:
+# passwd: password updated successfully
+
+Close Linux distribution app now.
+
+Now, in command prompt, you need to change back to user account:
+> ubuntu1804 config --default-user abcde
+
+Open Linux distribution app again.
+Try:
+$ sudo apt update
+If you are prompted to enter password, try the new one and see if it is updated.
