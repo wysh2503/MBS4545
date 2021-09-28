@@ -1,4 +1,14 @@
-Wnat to learn Linux command:
+
+Refer to the file on how to install WSL (WSL2) with Ubuntu18.04 and GUI from Remote Desktop
+
+We will install ROS (Melodic) and Turtlebot3 packages.
+Note: ROS (Kinetic) will also work.
+
+A open-source 3D robotics simulator (Gazebo) and a 3D visualizer for ROS (Rviz) will be installed when ROS-Melodic-Desktop-Full is installed.
+
+###################################################################
+
+Want to learn more Linux command:
 
 https://ubuntu.com/tutorials/command-line-for-beginners#1-overview
 
