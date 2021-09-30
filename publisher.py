@@ -4,7 +4,7 @@ import rospy
 from std_msgs.msg import String
 
 def publishMethod():
-	rospy.init_node(‘publisher_topic’, anonymous=True)
+	rospy.init_node(‘publisher_node’, anonymous=True)
 	pub = rospy.Publisher(‘talker’, String, queue_size=10)
 	rate = rospy.Rate(10)
 	while not rospy.is_shutdown():
