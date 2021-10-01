@@ -1,0 +1,44 @@
+# Install ROS Melodic and dependent Packages
+# Install Turtlebot3 Packages
+# Install Turtlebot3 Simulation Packages
+
+# Follow the procedure in the links below or follow below commands
+
+https://emanual.robotis.com/docs/en/platform/turtlebot3/quick-start/
+https://emanual.robotis.com/docs/en/platform/turtlebot3/simulation/
+
+***************************************************************************************
+
+# Open the terminal(shortcut: Ctrl+Alt+T) and enter below commands one at a time:
+$ sudo apt update
+$ sudo apt upgrade
+$ wget https://raw.githubusercontent.com/ROBOTIS-GIT/robotis_tools/master/install_ros_melodic.sh
+$ chmod 755 ./install_ros_melodic.sh 
+$ bash ./install_ros_melodic.sh
+
+# Install Dependent ROS Packages
+$ sudo apt-get install ros-melodic-joy ros-melodic-teleop-twist-joy
+$ sudo apt-get install ros-melodic-teleop-twist-keyboard ros-melodic-laser-proc
+$ sudo apt-get install ros-melodic-rgbd-launch ros-melodic-depthimage-to-laserscan
+$ sudo apt-get install ros-melodic-rosserial-arduino ros-melodic-rosserial-python
+$ sudo apt-get install ros-melodic-rosserial-server ros-melodic-rosserial-client
+$ sudo apt-get install ros-melodic-rosserial-msgs ros-melodic-amcl ros-melodic-map-server
+$ sudo apt-get install ros-melodic-move-base ros-melodic-urdf ros-melodic-xacro
+$ sudo apt-get install ros-melodic-compressed-image-transport ros-melodic-rqt*
+$ sudo apt-get install ros-melodic-gmapping ros-melodic-navigation ros-kinetic-interactive-markers
+
+Install TurtleBot3 Packages
+$ sudo apt-get install ros-melodic-dynamixel-sdk
+$ sudo apt-get install ros-melodic-turtlebot3-msgs
+$ sudo apt-get install ros-melodic-turtlebot3
+*************************************************************************************
+
+# edit ~/.bashrc --> comment out "source ~/catkin_ws/devel/setup.bash" --> save the file
+
+*************************************************************************************
+
+# Install Turtlebot3 Simulation Packages
+$ cd ~/catkin_ws/src/
+$ git clone -b melodic-devel https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git
+$ cd ~/catkin_ws
+$ catkin_make
