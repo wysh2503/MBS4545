@@ -1,5 +1,6 @@
 
 Refer to the file on how to install WSL (WSL2) with Ubuntu18.04 and GUI from Remote Desktop
+Another tutorial on how to install Ubuntu18.04 on VMware is posted on Moodle. Check it out.
 
 We will install ROS (Melodic) and Turtlebot3 packages.
 Note: ROS (Kinetic) will also work.
@@ -16,6 +17,8 @@ https://ubuntu.com/tutorials/command-line-for-beginners#1-overview
 Want to learn ROS:
 
 http://wiki.ros.org/ROS/Tutorials
+
+![melodic](https://user-images.githubusercontent.com/74127616/135704812-eb1861ad-393b-492e-9564-9a8fba4f41fc.png)
 
 ###################################################################
 
