@@ -11,12 +11,12 @@ disToObstacle = 1
 def callback(msg): 
   rospy.loginfo(rospy.get_caller_id() + " Distance to obstacle :  %s",msg.ranges[180])
 
-#If the distance to an obstacle in front of the robot is larger than 1 meter, the robot will keep moving forward
+  #If the distance to an obstacle in front of the robot is larger than 1 meter, the robot will keep moving forward
   if msg.ranges[180] > disToObstacle:
       move.linear.x = 0.5
       move.angular.z = 0.0
 
-#If the distance to an obstacle in front of the robot is less than 1 meter, the robot will turn left
+  #If the distance to an obstacle in front of the robot is less than 1 meter, the robot will turn left
   if msg.ranges[180] <= disToObstacle: 
       move.linear.x = 0.0
       move.angular.z = 0.5
