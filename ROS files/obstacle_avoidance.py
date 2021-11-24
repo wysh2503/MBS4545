@@ -18,13 +18,13 @@ def callback(msg):
 
 #If the distance to an obstacle in front of the robot is less than 1 meter, the robot will turn left
   if msg.ranges[300] <= disToObstacle: 
-      move.linear.x = 0.
+      move.linear.x = 0.0
       move.angular.z = 0.5
 
   pub.publish(move)
   
 
-rospy.init_node('sub_node')
+rospy.init_node('pub_sub_bot_node')
 sub = rospy.Subscriber('/scan', LaserScan, callback) #subscribe to the laser topic
 pub = rospy.Publisher('/cmd_vel', Twist, queue_size=2)
 rate = rospy.Rate(2)
